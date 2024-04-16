@@ -1,4 +1,4 @@
-package com.github.sibmaks.storage.api;
+package com.github.simple_mocks.storage.api;
 
 import java.time.ZonedDateTime;
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.Map;
  * Definition of type Content.
  *
  * @author sibmaks
- * @since 2023-04-11
+ * @since 0.0.1
  */
 public interface Content {
     /**
@@ -34,7 +34,7 @@ public interface Content {
     /**
      * Content binary array
      *
-     * @return content as binary array
+     * @return content as a binary array
      */
     byte[] getContent();
 
