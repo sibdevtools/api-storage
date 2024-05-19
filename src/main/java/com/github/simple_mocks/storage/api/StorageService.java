@@ -14,7 +14,8 @@ public interface StorageService {
 
     /**
      * Get content from storage.<br/>
-     * In case if content not found {@link StorageErrors#NOT_FOUND} should be throws.
+     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_FOUND} should be throws.<br/>
+     * In case if content not found {@link StorageErrors#CONTENT_NOT_FOUND} should be throws.
      *
      * @param id content id
      * @return content
@@ -23,7 +24,7 @@ public interface StorageService {
 
     /**
      * Delete content from storage.<br/>
-     * In case if bucket is readonly {@link StorageErrors#BUCKET_READONLY} should be thrown.
+     * In case if bucket is readonly {@link StorageErrors#BUCKET_READONLY} should be thrown.<br/>
      * In case if content is not found in storage, nothing should be changed.
      *
      * @param id content id
