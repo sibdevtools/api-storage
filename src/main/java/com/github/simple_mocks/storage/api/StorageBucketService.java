@@ -1,7 +1,5 @@
 package com.github.simple_mocks.storage.api;
 
-import java.util.List;
-
 /**
  * Definition of storage bucket service
  *
@@ -19,16 +17,16 @@ public interface StorageBucketService {
 
     /**
      * Get list of bucket contents from storage.<br/>
-     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_FOUND} should be throws.
+     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_EXISTS} should be throws.
      *
      * @param code bucket code
-     * @return list of bucket contents
+     * @return bucket information
      */
-    List<BucketContent> get(String code);
+    Bucket get(String code);
 
     /**
      * Change read only flag for bucket..<br/>
-     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_FOUND} should be throws.<br/>
+     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_EXISTS} should be throws.<br/>
      * In case if bucket has same flag, nothing should be done.
      *
      * @param code     bucket code
@@ -38,7 +36,6 @@ public interface StorageBucketService {
 
     /**
      * Delete bucket from storage.<br/>
-     * In case if bucket is readonly {@link StorageErrors#BUCKET_READONLY} should be thrown.
      * In case if some content exists in bucket {@link StorageErrors#BUCKET_NOT_EMPTY} should be thrown.
      *
      * @param code bucket code
