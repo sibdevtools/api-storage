@@ -14,7 +14,7 @@ public interface StorageService {
 
     /**
      * Get content from storage.<br/>
-     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_FOUND} should be throws.<br/>
+     * In case if bucket not found {@link StorageErrors#BUCKET_NOT_EXISTS} should be throws.<br/>
      * In case if content not found {@link StorageErrors#CONTENT_NOT_FOUND} should be throws.
      *
      * @param id content id
