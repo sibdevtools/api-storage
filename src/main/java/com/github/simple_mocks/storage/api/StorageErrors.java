@@ -11,10 +11,6 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum StorageErrors implements ServiceError {
     /**
-     * Bucket not found
-     */
-    BUCKET_NOT_FOUND,
-    /**
      * Content not found
      */
     CONTENT_NOT_FOUND,
