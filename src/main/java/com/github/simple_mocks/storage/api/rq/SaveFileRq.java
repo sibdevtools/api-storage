@@ -1,6 +1,7 @@
 package com.github.simple_mocks.storage.api.rq;
 
 import jakarta.annotation.Nonnull;
+import lombok.Builder;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -16,6 +17,7 @@ import java.util.Objects;
  * @author sibmaks
  * @since 0.0.7
  */
+@Builder
 public record SaveFileRq(@Nonnull String bucket,
                          @Nonnull  String name,
                          @Nonnull Map<String, String> meta,

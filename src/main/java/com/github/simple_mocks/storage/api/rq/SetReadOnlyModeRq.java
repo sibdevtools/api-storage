@@ -1,6 +1,7 @@
 package com.github.simple_mocks.storage.api.rq;
 
 import jakarta.annotation.Nonnull;
+import lombok.Builder;
 
 /**
  * Change read-only mode request
@@ -10,6 +11,7 @@ import jakarta.annotation.Nonnull;
  * @author sibmaks
  * @since 0.0.7
  */
+@Builder
 public record SetReadOnlyModeRq(@Nonnull String code,
                                 boolean readOnly) {
 }
