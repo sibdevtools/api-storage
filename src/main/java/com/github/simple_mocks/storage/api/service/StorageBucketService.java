@@ -13,7 +13,7 @@ import jakarta.annotation.Nonnull;
 public interface StorageBucketService {
     /**
      * Create bucket in storage.<br/>
-     * In case if bucket already exist "BUCKET_ALREADY_EXISTS" should be thrown.<br/>
+     * In case if bucket already exist exception should be thrown.<br/>
      *
      * @param code bucket code
      */
@@ -21,7 +21,7 @@ public interface StorageBucketService {
 
     /**
      * Get a list of bucket contents from storage.<br/>
-     * In case if a bucket is not found, "BUCKET_NOT_EXISTS" should be throws.
+     * In case if a bucket is not found, exception should be thrown.
      *
      * @param code bucket code
      * @return bucket information
@@ -31,7 +31,7 @@ public interface StorageBucketService {
 
     /**
      * Change read-only flag for bucket.<br/>
-     * In case if bucket not found "BUCKET_NOT_EXISTS" should be throws.<br/>
+     * In case if bucket not found exception should be thrown.<br/>
      * In case if bucket has the same flag, nothing should be done.
      *
      * @param rq change mode request
@@ -40,7 +40,7 @@ public interface StorageBucketService {
 
     /**
      * Delete bucket from storage.<br/>
-     * In case if some content exists in bucket "BUCKET_NOT_EMPTY" should be thrown.
+     * In case if some content exists in the bucket, exception should be thrown.
      *
      * @param code bucket code
      */
