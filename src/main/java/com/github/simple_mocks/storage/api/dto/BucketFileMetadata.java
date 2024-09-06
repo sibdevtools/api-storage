@@ -15,6 +15,5 @@ public interface BucketFileMetadata {
      * @param key metadata key
      * @return metadata value
      */
-    @Nonnull
     String get(String key);
 }
