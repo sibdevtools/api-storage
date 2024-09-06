@@ -38,6 +38,14 @@ public interface Bucket {
     ZonedDateTime getCreatedAt();
 
     /**
+     * Zoned date of bucket-last modification.
+     *
+     * @return modification date
+     */
+    @Nonnull
+    ZonedDateTime getModifiedAt();
+
+    /**
      * List of bucket contents.
      *
      * @return bucket contents
