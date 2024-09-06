@@ -1,20 +1,22 @@
-package com.github.simple_mocks.storage.api;
+package com.github.simple_mocks.storage.api.dto;
+
+import jakarta.annotation.Nonnull;
 
 import java.time.ZonedDateTime;
-import java.util.Map;
 
 /**
- * Definition of type Content.
+ * Definition of type content in bucket.
  *
  * @author sibmaks
- * @since 0.0.1
+ * @since 0.0.5
  */
-public interface Content {
+public interface BucketFileDescription {
     /**
      * Content identification in storage
      *
      * @return content id
      */
+    @Nonnull
     String getId();
 
     /**
@@ -22,6 +24,7 @@ public interface Content {
      *
      * @return content name
      */
+    @Nonnull
     String getName();
 
     /**
@@ -29,20 +32,15 @@ public interface Content {
      *
      * @return meta attributes
      */
-    Map<String, String> getMeta();
-
-    /**
-     * Content binary array
-     *
-     * @return content as a binary array
-     */
-    byte[] getContent();
+    @Nonnull
+    BucketFileMetadata getMeta();
 
     /**
      * Date of content creation
      *
      * @return creation date
      */
+    @Nonnull
     ZonedDateTime getCreatedAt();
 
     /**
@@ -50,5 +48,6 @@ public interface Content {
      *
      * @return modification date
      */
+    @Nonnull
     ZonedDateTime getModifiedAt();
 }

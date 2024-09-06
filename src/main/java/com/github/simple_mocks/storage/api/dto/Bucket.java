@@ -1,4 +1,6 @@
-package com.github.simple_mocks.storage.api;
+package com.github.simple_mocks.storage.api.dto;
+
+import jakarta.annotation.Nonnull;
 
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -16,10 +18,11 @@ public interface Bucket {
      *
      * @return bucket code
      */
+    @Nonnull
     String getCode();
 
     /**
-     * Is bucket read-only. Readonly means that content can not be modified in bucket.<br/>
+     * Is bucket read-only. Readonly means that content cannot be modified in bucket.<br/>
      * But empty read-only bucket can be deleted.
      *
      * @return read-only status
@@ -31,13 +34,15 @@ public interface Bucket {
      *
      * @return creation date
      */
+    @Nonnull
     ZonedDateTime getCreatedAt();
 
     /**
-     * Zoned date of bucket last modification.
+     * Zoned date of bucket-last modification.
      *
      * @return modification date
      */
+    @Nonnull
     ZonedDateTime getModifiedAt();
 
     /**
@@ -45,6 +50,7 @@ public interface Bucket {
      *
      * @return bucket contents
      */
-    List<BucketContent> getContents();
+    @Nonnull
+    List<BucketFileDescription> getContents();
 
 }

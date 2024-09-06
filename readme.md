@@ -1,4 +1,4 @@
-# Simple Mock - Storage API
+# Simple Mock - Storage Service API
 
 ## To build
 
