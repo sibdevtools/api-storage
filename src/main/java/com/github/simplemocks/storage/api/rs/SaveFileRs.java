@@ -1,5 +1,6 @@
 package com.github.simplemocks.storage.api.rs;
 
+import com.github.simplemocks.common.api.dto.ErrorRsDto;
 import com.github.simplemocks.common.api.rs.StandardBodyRs;
 import jakarta.annotation.Nonnull;
 
@@ -18,5 +19,14 @@ public class SaveFileRs extends StandardBodyRs<String> {
      */
     public SaveFileRs(@Nonnull String bucketFileId) {
         super(bucketFileId);
+    }
+
+    /**
+     * Construct save files response with error
+     *
+     * @param error happened error
+     */
+    public SaveFileRs(@Nonnull ErrorRsDto error) {
+        super(error);
     }
 }

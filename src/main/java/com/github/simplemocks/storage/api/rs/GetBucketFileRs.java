@@ -1,5 +1,6 @@
 package com.github.simplemocks.storage.api.rs;
 
+import com.github.simplemocks.common.api.dto.ErrorRsDto;
 import com.github.simplemocks.common.api.rs.StandardBodyRs;
 import com.github.simplemocks.storage.api.dto.BucketFile;
 import jakarta.annotation.Nonnull;
@@ -19,5 +20,14 @@ public class GetBucketFileRs extends StandardBodyRs<BucketFile> {
      */
     public GetBucketFileRs(@Nonnull BucketFile bucketFile) {
         super(bucketFile);
+    }
+
+    /**
+     * Construct get bucket file description response with error
+     *
+     * @param error happened error
+     */
+    public GetBucketFileRs(@Nonnull ErrorRsDto error) {
+        super(error);
     }
 }
