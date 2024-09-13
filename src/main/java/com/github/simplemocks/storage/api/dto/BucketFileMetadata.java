@@ -1,6 +1,8 @@
-package com.github.simple_mocks.storage.api.dto;
+package com.github.simplemocks.storage.api.dto;
 
 import jakarta.annotation.Nonnull;
+
+import java.util.Set;
 
 /**
  * Definition of type bucket's file's metadata.
@@ -15,5 +17,12 @@ public interface BucketFileMetadata {
      * @param key metadata key
      * @return metadata value
      */
-    String get(String key);
+    String get(@Nonnull String key);
+
+    /**
+     * Get set of attribute names
+     *
+     * @return set of names
+     */
+    Set<String> getAttributeNames();
 }

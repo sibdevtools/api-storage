@@ -1,7 +1,7 @@
-package com.github.simple_mocks.storage.api.service;
+package com.github.simplemocks.storage.api.service;
 
-import com.github.simple_mocks.storage.api.dto.Bucket;
-import com.github.simple_mocks.storage.api.rq.SetReadOnlyModeRq;
+import com.github.simplemocks.storage.api.dto.Bucket;
+import com.github.simplemocks.storage.api.rq.SetReadOnlyModeRq;
 import jakarta.annotation.Nonnull;
 
 /**

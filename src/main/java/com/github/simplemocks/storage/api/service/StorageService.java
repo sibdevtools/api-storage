@@ -1,8 +1,8 @@
-package com.github.simple_mocks.storage.api.service;
+package com.github.simplemocks.storage.api.service;
 
-import com.github.simple_mocks.storage.api.dto.BucketFile;
-import com.github.simple_mocks.storage.api.dto.BucketFileDescription;
-import com.github.simple_mocks.storage.api.rq.SaveFileRq;
+import com.github.simplemocks.storage.api.dto.BucketFile;
+import com.github.simplemocks.storage.api.dto.BucketFileDescription;
+import com.github.simplemocks.storage.api.rq.SaveFileRq;
 import jakarta.annotation.Nonnull;
 
 /**
