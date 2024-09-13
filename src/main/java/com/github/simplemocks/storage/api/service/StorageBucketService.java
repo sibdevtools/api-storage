@@ -1,7 +1,8 @@
 package com.github.simplemocks.storage.api.service;
 
-import com.github.simplemocks.storage.api.dto.Bucket;
+import com.github.simplemocks.common.api.rs.StandardRs;
 import com.github.simplemocks.storage.api.rq.SetReadOnlyModeRq;
+import com.github.simplemocks.storage.api.rs.GetBucketRs;
 import jakarta.annotation.Nonnull;
 
 /**
@@ -16,8 +17,10 @@ public interface StorageBucketService {
      * In case if bucket already exist exception should be thrown.<br/>
      *
      * @param code bucket code
+     * @return standard response
      */
-    void create(@Nonnull String code);
+    @Nonnull
+    StandardRs create(@Nonnull String code);
 
     /**
      * Get a list of bucket contents from storage.<br/>
@@ -27,7 +30,7 @@ public interface StorageBucketService {
      * @return bucket information
      */
     @Nonnull
-    Bucket get(@Nonnull String code);
+    GetBucketRs get(@Nonnull String code);
 
     /**
      * Change read-only flag for bucket.<br/>
@@ -35,14 +38,18 @@ public interface StorageBucketService {
      * In case if bucket has the same flag, nothing should be done.
      *
      * @param rq change mode request
+     * @return standard response
      */
-    void setReadOnly(@Nonnull SetReadOnlyModeRq rq);
+    @Nonnull
+    StandardRs setReadOnly(@Nonnull SetReadOnlyModeRq rq);
 
     /**
      * Delete bucket from storage.<br/>
      * In case if some content exists in the bucket, exception should be thrown.
      *
      * @param code bucket code
+     * @return standard response
      */
-    void delete(@Nonnull String code);
+    @Nonnull
+    StandardRs delete(@Nonnull String code);
 }

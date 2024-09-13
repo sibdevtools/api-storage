@@ -2,6 +2,7 @@ package com.github.simplemocks.storage.api.dto;
 
 import jakarta.annotation.Nonnull;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 /**
@@ -10,7 +11,7 @@ import java.time.ZonedDateTime;
  * @author sibmaks
  * @since 0.0.5
  */
-public interface BucketFileDescription {
+public interface BucketFileDescription extends Serializable {
     /**
      * Content identification in storage
      *

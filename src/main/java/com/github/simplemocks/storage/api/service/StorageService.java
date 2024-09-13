@@ -1,8 +1,10 @@
 package com.github.simplemocks.storage.api.service;
 
-import com.github.simplemocks.storage.api.dto.BucketFile;
-import com.github.simplemocks.storage.api.dto.BucketFileDescription;
+import com.github.simplemocks.common.api.rs.StandardRs;
 import com.github.simplemocks.storage.api.rq.SaveFileRq;
+import com.github.simplemocks.storage.api.rs.GetBucketFileDescriptionRs;
+import com.github.simplemocks.storage.api.rs.GetBucketFileRs;
+import com.github.simplemocks.storage.api.rs.SaveFileRs;
 import jakarta.annotation.Nonnull;
 
 /**
@@ -24,7 +26,7 @@ public interface StorageService {
      * @return bucket file
      */
     @Nonnull
-    BucketFile get(@Nonnull String id);
+    GetBucketFileRs get(@Nonnull String id);
 
     /**
      * Get stored file description, without content.<br/>
@@ -34,7 +36,7 @@ public interface StorageService {
      * @return file description
      */
     @Nonnull
-    BucketFileDescription getDescription(@Nonnull String id);
+    GetBucketFileDescriptionRs getDescription(@Nonnull String id);
 
     /**
      * Delete file from storage.<br/>
@@ -42,8 +44,10 @@ public interface StorageService {
      * In case if content is not found in storage, nothing should be changed.
      *
      * @param id content id
+     * @return standard response
      */
-    void delete(@Nonnull String id);
+    @Nonnull
+    StandardRs delete(@Nonnull String id);
 
     /**
      * Create a file in storage.<br/>
@@ -54,6 +58,6 @@ public interface StorageService {
      * @return content id
      */
     @Nonnull
-    String save(@Nonnull SaveFileRq rq);
+    SaveFileRs save(@Nonnull SaveFileRq rq);
 
 }

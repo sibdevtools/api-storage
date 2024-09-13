@@ -2,6 +2,7 @@ package com.github.simplemocks.storage.api.dto;
 
 import jakarta.annotation.Nonnull;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * @author sibmaks
  * @since 0.0.6
  */
-public interface Bucket {
+public interface Bucket extends Serializable {
 
     /**
      * Get bucket code

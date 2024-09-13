@@ -2,13 +2,15 @@ package com.github.simplemocks.storage.api.dto;
 
 import jakarta.annotation.Nonnull;
 
+import java.io.Serializable;
+
 /**
  * Definition of a file with content in a bucket.
  *
  * @author sibmaks
  * @since 0.0.5
  */
-public interface BucketFile {
+public interface BucketFile extends Serializable {
 
     /**
      * Bucket file description
