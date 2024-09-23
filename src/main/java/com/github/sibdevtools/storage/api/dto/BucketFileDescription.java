@@ -1,4 +1,4 @@
-package com.github.simplemocks.storage.api.dto;
+package com.github.sibdevtools.storage.api.dto;
 
 import jakarta.annotation.Nonnull;
 

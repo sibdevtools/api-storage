@@ -1,10 +1,10 @@
-package com.github.simplemocks.storage.api.service;
+package com.github.sibdevtools.storage.api.service;
 
-import com.github.simplemocks.common.api.rs.StandardRs;
-import com.github.simplemocks.storage.api.rq.SaveFileRq;
-import com.github.simplemocks.storage.api.rs.GetBucketFileDescriptionRs;
-import com.github.simplemocks.storage.api.rs.GetBucketFileRs;
-import com.github.simplemocks.storage.api.rs.SaveFileRs;
+import com.github.sibdevtools.common.api.rs.StandardRs;
+import com.github.sibdevtools.storage.api.rq.SaveFileRq;
+import com.github.sibdevtools.storage.api.rs.GetBucketFileDescriptionRs;
+import com.github.sibdevtools.storage.api.rs.GetBucketFileRs;
+import com.github.sibdevtools.storage.api.rs.SaveFileRs;
 import jakarta.annotation.Nonnull;
 
 /**

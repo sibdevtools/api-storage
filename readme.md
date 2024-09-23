@@ -1,4 +1,4 @@
-# Simple Mock - Storage Service API
+# SibDevTools - Storage Service API
 
 ## To build
 

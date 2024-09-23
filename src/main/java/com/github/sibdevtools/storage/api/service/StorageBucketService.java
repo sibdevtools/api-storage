@@ -1,8 +1,8 @@
-package com.github.simplemocks.storage.api.service;
+package com.github.sibdevtools.storage.api.service;
 
-import com.github.simplemocks.common.api.rs.StandardRs;
-import com.github.simplemocks.storage.api.rq.SetReadOnlyModeRq;
-import com.github.simplemocks.storage.api.rs.GetBucketRs;
+import com.github.sibdevtools.common.api.rs.StandardRs;
+import com.github.sibdevtools.storage.api.rq.SetReadOnlyModeRq;
+import com.github.sibdevtools.storage.api.rs.GetBucketRs;
 import jakarta.annotation.Nonnull;
 
 /**

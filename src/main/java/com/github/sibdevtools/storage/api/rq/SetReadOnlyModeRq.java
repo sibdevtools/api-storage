@@ -1,4 +1,4 @@
-package com.github.simplemocks.storage.api.rq;
+package com.github.sibdevtools.storage.api.rq;
 
 import jakarta.annotation.Nonnull;
 import lombok.Builder;
